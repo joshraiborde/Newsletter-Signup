@@ -6,6 +6,8 @@ const app = express();
 const port = 3000;
 var now = new Date();
 
+app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
