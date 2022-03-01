@@ -81,6 +81,11 @@ app.post("/failure", (req, res) => {
     res.redirect("/")
 })
 
+// post request for the success route to go back to the home page
+app.post("/success", (req, res) => {
+    res.redirect("/")
+})
+
 app.listen(process.env.PORT || port, () => {
   console.log("Listening Route. Server is running on Port " + port + " on " + now.toUTCString());
 });
