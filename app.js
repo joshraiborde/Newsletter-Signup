@@ -8,6 +8,10 @@ const MAPI_KEY = process.env.API_KEY
 const MLIST_ID = process.env.LIST_ID
 const MAPI_SERVER = process.env.API_SERVER
 
+
+
+
+
 const app = express();
 const port = 3000;
 var now = new Date();
@@ -45,8 +49,7 @@ app.post("/", (req, res) => {
     };
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us14.api.mailchimp.com/3.0/lists/"+MLIST_ID
-    // const url = "https://"+MAPI_SERVER+ ".api.mailchimp.com/3.0/lists/"+MLIST_ID
+    const url = "https://"+MAPI_SERVER+ ".api.mailchimp.com/3.0/lists/"+MLIST_ID
 
     const options = {
         method: "POST",
