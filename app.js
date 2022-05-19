@@ -8,19 +8,14 @@ const MAPI_KEY = process.env.API_KEY
 const MLIST_ID = process.env.LIST_ID
 const MAPI_SERVER = process.env.API_SERVER
 
-
-
-
-
 const app = express();
 const port = 3000;
 var now = new Date();
 
-app.use(express.static("public")); // this will allow all the static css and images to be rendered.
+// this will allow all the static css and images to be rendered.
+app.use(express.static("public")); 
 
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(express.urlencoded());
-
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/signup.html");
